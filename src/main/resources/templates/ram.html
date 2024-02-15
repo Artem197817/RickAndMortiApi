@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick And Morty API</title>
+    <link th:href="@{/styles/ram.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">The Rick And Morty API</div>
+    <div class="content">
+    <div class="block" th:each="res: ${results}" >
+        <img th:src="${res.image}" alt="image" width="350"/>
+        <div class="result">
+      <p>id - <span th:text="${res.id}"></span></p>
+        <p>Name -  <span th:text="${res.name}"></span> </p>
+        <p>Status -  <span th:text="${res.status}"></span></p>
+        <p>Species - <span th:text="${res.species}"></span></p>
+        <p>Type -  <span th:text="${res.type}"></span></p>
+        <p>Gender - <span th:text="${res.gender}"></span></p>
+        <a th:href="${res.url}">URL</a>
+        <p>Created - <span th:text="${res.created}"></span></p>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

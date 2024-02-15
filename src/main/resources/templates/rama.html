@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link th:href="@{/styles/rama.css}" rel="stylesheet"/>
+</head>
+<body>
+<h1>The Rick And Morty API </h1>
+<div class="content">
+    <div class="block">
+        <div class="blockimg">
+            <img th:src="@{/images/562.jpeg}" alt="gh" width="230"/>
+        </div>
+        <div class="blockh">
+            <div class="blockhref">
+                <a th:href="@{/web/character}"><h2>Balthromaw </h2></a>
+                <h5>Alive - Mythological Creature</h5>
+            </div>
+            <div class="blockhref">
+                <h4>Last known location:</h4>
+                <a th:href="@{/web/location}"><h3>Earth (Replacement Dimension)</h3></a>
+            </div>
+            <div class="blockhref">
+                <h5>First seen in:</h5>
+                <a th:href="@{/web/episode}"><h3>Claw and Hoarder: Special Ricktim's Morty </h3></a>
+            </div>
+        </div>
+    </div>
+        <div class="block"></div>
+    </div>
+
+</body>
+</html>
